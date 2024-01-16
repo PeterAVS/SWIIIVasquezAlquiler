@@ -1,0 +1,20 @@
+digraph "ContextMapGraph" {
+graph ["imagepath"="/tmp/GraphvizJava"]
+"GestionAlquilerContext" ["margin"="0.3","orientation"="115","shape"="egg","fontsize"="16","style"="bold","label"="GestionAlquilerContext\n","fontname"="sans-serif"]
+"GestionClienteContext" ["margin"="0.3","orientation"="252","shape"="egg","fontsize"="16","style"="bold","label"="GestionClienteContext\n","fontname"="sans-serif"]
+"SeguridadContext" ["margin"="0.3","orientation"="60","shape"="egg","fontsize"="16","style"="bold","label"="SeguridadContext\n","fontname"="sans-serif"]
+"GestionPagosContext" ["margin"="0.3","orientation"="46","shape"="egg","fontsize"="16","style"="bold","label"="GestionPagosContext\n","fontname"="sans-serif"]
+"GestionVehiculoContext" ["margin"="0.3","orientation"="12","shape"="egg","fontsize"="16","style"="bold","label"="GestionVehiculoContext\n","fontname"="sans-serif"]
+"GestionAlquilerContext" -> "GestionClienteContext" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+"GestionAlquilerContext" -> "SeguridadContext" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+"GestionPagosContext" -> "SeguridadContext" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>CF</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">U</td><td sides="trbl" bgcolor="white"><font>PL</font></td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"GestionVehiculoContext" -> "GestionAlquilerContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+}

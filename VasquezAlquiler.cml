@@ -1,0 +1,37 @@
+ContextMap AlquilerMap{
+    contains GestionAlquilerContext
+    contains GestionClienteContext
+    contains GestionVehiculoContext
+    contains GestionPagosContext
+    contains SeguridadContext
+
+    /* Cooperación */
+    GestionAlquilerContext [P]<->[P] SeguridadContext
+    
+    /* Conformista */
+   SeguridadContext [CF]<-[PL] GestionPagosContext
+
+    /* Customer - Supplier */
+    GestionAlquilerContext [D]<-[U] GestionVehiculoContext
+    
+    /* Shared - kernel*/
+    GestionAlquilerContext [SK]<->[SK] GestionClienteContext    
+   
+    }
+
+BoundedContext GestionAlquilerContext {
+    
+}
+
+BoundedContext GestionClienteContext {
+    
+}
+BoundedContext GestionVehiculoContext {
+    
+}
+BoundedContext GestionPagosContext {
+    
+}
+BoundedContext SeguridadContext {
+    
+}
